@@ -1,51 +1,112 @@
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ 
 .header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #19283f;
     display: block;
     color: beige;
     margin: 0;
-}
-
-a {
+  }
+  
+  a {
     font-size: 200%;
     color: beige;
-}
-
-.navbar {
+    text-decoration: none; 
+    margin-right: 20px; 
+  }
+  
+  .navbar {
     display: flex;
     font-size: 50%;
     justify-content: right;
     padding: 10px;
     color: beige;
-}
-
-.background {
-    height: calc(100vh - 60px); /* Subtracting the height of the navbar from the viewport height */
-    margin-top: 60px; /* Adding margin to the top of the image to prevent overlap */
+  }
+  .background {
+    height: 100vh;
+    margin: 0;
     position: relative;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.intro h2,
-.projects h2,
-.contact h2 {
+  }
+  
+  .background img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .intro h2,
+  .projects h2,
+  .contact h2 {
     margin-right: 2rem;
-}
-.section {
+  }
+  
+  .section {
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 50vh; /* Reducing the height to create less space under the image */
-}
-.section p {
+    height: 100vh;
+  }
+  
+  .section p {
     border-left: 2px solid black;
     padding-left: 2rem;
-}
-.projects img{
+    font-size: 75%;
+  }
+  .section.intro {
+    margin-top: 10px;
+  }
+  .projects img {
     height: 100px;
-}
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email {
+    margin-bottom: 1rem;
+  }
+  
+@media only screen and (max-width: 768px) {
+    .background {
+      height: auto;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+  
+    .background img {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .section {
+      width: 100%;
+    }
+  
+    .about,
+    .work,
+    .contact {
+      padding: 1rem;
+    }
+  
+    .work img {
+      height: 75px;
+      margin: 0.5rem;
+      width: 100px;
+    }
+  
+    .work img:first-child {
+      height: 100px;
+      width: 150px;
+    }
+  }

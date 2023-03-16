@@ -1,0 +1,51 @@
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #19283f;
+    display: block;
+    color: beige;
+    margin: 0;
+}
+
+a {
+    font-size: 200%;
+    color: beige;
+}
+
+.navbar {
+    display: flex;
+    font-size: 50%;
+    justify-content: right;
+    padding: 10px;
+    color: beige;
+}
+
+.background {
+    height: calc(100vh - 60px); /* Subtracting the height of the navbar from the viewport height */
+    margin-top: 60px; /* Adding margin to the top of the image to prevent overlap */
+    position: relative;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h2,
+.projects h2,
+.contact h2 {
+    margin-right: 2rem;
+}
+.section {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50vh; /* Reducing the height to create less space under the image */
+}
+.section p {
+    border-left: 2px solid black;
+    padding-left: 2rem;
+}
+.projects img{
+    height: 100px;
+}
